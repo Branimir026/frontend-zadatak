@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Comment from "./Comment";
+import Container from "react-bootstrap/Container";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -26,14 +27,14 @@ const Comments = () => {
   }, []);
 
   return (
-    <div>
+    <Container className="comments">
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
       {comments &&
         comments.map((comment) => {
           return <Comment comment={comment} key={comment.timestamp} />;
         })}
-    </div>
+    </Container>
   );
 };
 
