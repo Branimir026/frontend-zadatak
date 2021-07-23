@@ -11,9 +11,22 @@ const Comment = ({ comment }) => {
 
   const convertTimestampToTime = (timestamp) => {
     const dateObj = new Date(timestamp);
-    const utcString = dateObj.toUTCString();
-    const time = utcString.slice(-12, -7);
-    setCommentTime(time);
+    let hours = dateObj.getUTCHours();
+    let minutes = dateObj.getUTCMinutes();
+    let stringHours = hours.toString().padStart(2, "0");
+    let stringMinutes = minutes.toString().padStart(2, "0");
+    let formattedTime = "";
+    if (hours > 12) {
+      formattedTime =
+        (stringHours - 12).toString().padStart(2, "0") +
+        ":" +
+        stringMinutes +
+        " AM";
+    } else {
+      formattedTime = stringHours + ":" + stringMinutes + " PM";
+    }
+    console.log(formattedTime);
+    setCommentTime(formattedTime);
   };
 
   return (
