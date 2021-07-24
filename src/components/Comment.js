@@ -42,10 +42,10 @@ const Comment = ({ comment }) => {
           <p className="commentText">{comment.text}</p>
         </Row>
         <Row>
-          <Col md="1">
+          <Col md="2" className="commentTime">
             <p>{commentTime}</p>
           </Col>
-          <Col md="1" className="reply">
+          <Col md="2" className="reply">
             <p>Reply</p>
           </Col>
         </Row>

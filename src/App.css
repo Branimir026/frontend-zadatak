@@ -18,6 +18,7 @@
   border-radius: 7px;
   margin-top: 10vh;
   padding-top: 10px;
+  padding-bottom: 80px;
   padding-right: 30px !important;
   padding-right: 30px !important;
   overflow-y: scroll;
@@ -32,9 +33,50 @@
   font-size: 1.2em;
 }
 
+.commentTime {
+  width: fit-content !important;
+}
+
 .reply {
   color: rgb(2, 49, 104);
   font-weight: 600;
+}
+
+.inputForm {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 75px;
+  width: 55%;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  position: fixed;
+  padding: 10px 0px;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, 0%);
+}
+
+.plusSign {
+  background-color: #023168ff;
+  color: white;
+  border-radius: 5px;
+  min-width: 50px;
+  font-size: 2em;
+  margin: 0px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.inputForm .form-control {
+  border: none;
+  height: 100%;
+}
+
+.inputForm .btn {
+  background-color: #023168ff;
+  color: white;
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
