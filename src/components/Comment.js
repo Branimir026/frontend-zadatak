@@ -4,10 +4,24 @@ import Col from "react-bootstrap/Col";
 
 const Comment = ({ comment }) => {
   const [commentTime, setCommentTime] = useState("");
+  const [newCommentText, setNewCommentText] = useState(``);
 
   useEffect(() => {
     convertTimestampToTime(comment.timestamp);
   }, [comment.timestamp]);
+
+  useEffect(() => {
+    const regex =
+      /((http|ftp|https)\:\/\/)?([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?.*/;
+    const found = comment.text.match(regex);
+    if (found) {
+      setNewCommentText(
+        comment.text.replace(found[0], `<strong> ${found[0]} </strong>`)
+      );
+    } else {
+      setNewCommentText(comment.text);
+    }
+  }, [comment.text, newCommentText]);
 
   const convertTimestampToTime = (timestamp) => {
     const dateObj = new Date(timestamp);
@@ -25,23 +39,27 @@ const Comment = ({ comment }) => {
     } else {
       formattedTime = stringHours + ":" + stringMinutes + " PM";
     }
-    console.log(formattedTime);
     setCommentTime(formattedTime);
   };
 
   return (
     <Row className="comment">
-      <Col md="1">
-        <img src={comment.author.picture} alt="Commentator" />
+      <Col md="1" className="profileImageContainer">
+        <img
+          src={comment.author.picture}
+          alt="Commentator"
+          className="profileImage"
+        />
       </Col>
       <Col md="11">
         <Row className="nameAndText">
-          <p className="authorName">
-            <strong>{comment.author.name}</strong>
-          </p>
-          <p className="commentText">{comment.text}</p>
+          <p className="authorName">{comment.author.name}</p>
+          <p
+            className="commentText"
+            dangerouslySetInnerHTML={{ __html: newCommentText }}
+          ></p>
         </Row>
-        <Row>
+        <Row className="timeAndReply">
           <Col md="2" className="commentTime">
             <p>{commentTime}</p>
           </Col>

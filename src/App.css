@@ -11,7 +11,7 @@
 }
 
 .comments {
-  background-color: #eceef1ff;
+  /*background-color: #eceef1ff;
   min-height: 80vh;
   max-height: 80vh;
   width: 66vw;
@@ -21,16 +21,62 @@
   padding-bottom: 80px;
   padding-right: 30px !important;
   padding-right: 30px !important;
-  overflow-y: scroll;
+  overflow-y: scroll;*/
+  position: absolute;
+  width: 1032px;
+  height: 864px;
+  /*left: 204px;*/
+  margin-left: auto;
+  margin-right: auto;
+  top: 80px;
+
+  background: #eceef1;
+  border-radius: 8px;
+}
+
+.comment {
+  margin: 5px;
+}
+
+.profileImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 0px;
 }
 
 .nameAndText {
   background-color: #ffffff;
-  border: 1px solid rgba(2, 49, 104, 0.2);
+  border: 1px solid #d8dee7;
   border-radius: 7px;
-  padding: 15px 20px 15px 20px;
+  padding: 24px;
   width: fit-content;
-  font-size: 1.2em;
+  font-size: 18px;
+}
+
+.authorName {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.commentText {
+  font-weight: 500;
+  color: #82878d;
+  line-height: 22px;
+}
+
+.timeAndReply {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .commentTime {
@@ -44,16 +90,17 @@
 
 .inputForm {
   background-color: #ffffff;
-  border-radius: 10px;
-  height: 75px;
-  width: 55%;
-  flex: 1;
+  border: 1px solid #d8dee7;
+  border-radius: 8px;
+  height: 72px;
+  width: 968px;
   display: flex;
   align-items: stretch;
   position: fixed;
   padding: 10px 0px;
+  margin-left: 2px;
   left: 50%;
-  top: 80%;
+  top: 88%;
   transform: translate(-50%, 0%);
 }
 
@@ -77,6 +124,14 @@
   background-color: #023168ff;
   color: white;
   height: 100%;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.paperPlaneIcon {
+  margin-right: 10px;
 }
 
 ::-webkit-scrollbar {

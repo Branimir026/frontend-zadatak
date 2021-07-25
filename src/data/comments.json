@@ -5,7 +5,7 @@
         "id": "1",
         "author": {
           "name": "Ivana Paradzikovic",
-          "picture": "img/ivana.jpg"
+          "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUlj2-NBIFiAD25W4e2qj9_uf8dFdV1fvvId_8Ad5eEcjaA8qcV9qExY9a3xFnWwqFAX0&usqp=CAU"
         },
         "text": "Hello there, so I was wondering if you know how much MB is in a GB?",
         "timestamp": 414514740000
@@ -15,26 +15,26 @@
         "parent_id": "1",
         "author": {
           "name": "Zmaj Sipovski",
-          "picture": "img/zmaj.jpg"
+          "picture": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b91ae6af-3261-4f95-990e-4896507279ad/d5jzig1-3bd05d51-8646-443c-9030-600bd5eaf473.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I5MWFlNmFmLTMyNjEtNGY5NS05OTBlLTQ4OTY1MDcyNzlhZFwvZDVqemlnMS0zYmQwNWQ1MS04NjQ2LTQ0M2MtOTAzMC02MDBiZDVlYWY0NzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.js96fjW1bMXaPF6fzpgHOc6xbsL7CsSqU1Nit2OEGwA"
         },
         "text": "Hey Ivana! Have you tried Googling that?",
         "timestamp": 414514860000
       },
       {
-        "id": "2",
+        "id": "3",
         "parent_id": "1",
         "author": {
           "name": "Ines Grah",
-          "picture": "img/ines.jpg"
+          "picture": "https://www.pngitem.com/pimgs/m/509-5090709_8-bit-pixel-heart-png-download-ace-of.png"
         },
         "text": "Zmaj has a point, tho I’d say its about 1000MB in a GB.",
         "timestamp": 414516900000
       },
       {
-        "id": "1",
+        "id": "4",
         "author": {
           "name": "Pero Pipovski",
-          "picture": "img/pero.jpg"
+          "picture": "https://www.seekpng.com/png/detail/149-1496749_pink-guy-pixel-character-no-background.png"
         },
         "text": "Hey guys, here is a nice web for that comoplicated conversion. www.convertunits.com/from/MB/to/GB",
         "timestamp": 1626861080278

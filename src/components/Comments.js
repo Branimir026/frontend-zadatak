@@ -5,6 +5,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -46,7 +48,10 @@ const Comments = () => {
           <Form.Control type="text" placeholder="Enter your message..." />
         </Col>
         <Col md="3">
-          <Button>Send message</Button>
+          <Button>
+            <FontAwesomeIcon icon={faPaperPlane} className="paperPlaneIcon" />
+            Send message
+          </Button>
         </Col>
       </Row>
     </Container>
