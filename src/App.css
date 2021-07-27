@@ -11,6 +11,7 @@
 }
 
 .comments {
+  overflow-y: scroll;
   position: absolute;
   width: 1032px;
   height: 864px;
