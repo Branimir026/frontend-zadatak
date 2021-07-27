@@ -12,6 +12,7 @@ const Comments = () => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [newComments, setNewComments] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:8000/data`)
@@ -31,6 +32,22 @@ const Comments = () => {
         setIsLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    let formattedComments = [];
+    comments.forEach((comment) => {
+      if (!comment.hasOwnProperty("parent_id")) {
+        comment.children = [];
+        formattedComments.push(comment);
+      } else {
+        formattedComments
+          .find((comm) => comm.id === comment.parent_id)
+          .children.push(comment);
+      }
+    });
+    console.log(formattedComments);
+    setNewComments(formattedComments);
+  }, [comments]);
 
   return (
     <Container className="comments">
