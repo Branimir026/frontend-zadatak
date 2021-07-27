@@ -12,11 +12,11 @@ const Comment = ({ comment }) => {
 
   useEffect(() => {
     const regex =
-      /((http|ftp|https)\:\/\/)?([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?.*/;
+      /((http|ftp|https):\/\/)?([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?.*/;
     const found = comment.text.match(regex);
     if (found) {
       setNewCommentText(
-        comment.text.replace(found[0], `<strong> ${found[0]} </strong>`)
+        comment.text.replace(found[0], `<a href=${found[0]}> ${found[0]} </a>`)
       );
     } else {
       setNewCommentText(comment.text);
