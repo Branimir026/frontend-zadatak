@@ -72,7 +72,7 @@ const Comment = ({ comment }) => {
           </Col>
         </Row>
       </Col>
-      <div style={{ marginLeft: "55px" }}>{nestedComments}</div>
+      <div style={{ paddingLeft: "65px" }}>{nestedComments}</div>
     </Row>
   );
 };
