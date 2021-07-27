@@ -53,8 +53,8 @@ const Comments = () => {
     <Container className="comments">
       {error && <h2>{error}</h2>}
       {isLoading && <h2>Loading...</h2>}
-      {comments &&
-        comments.map((comment) => {
+      {newComments &&
+        newComments.map((comment) => {
           return <Comment comment={comment} key={comment.timestamp} />;
         })}
       <Row className="inputForm">

@@ -6,6 +6,10 @@ const Comment = ({ comment }) => {
   const [commentTime, setCommentTime] = useState("");
   const [newCommentText, setNewCommentText] = useState(``);
 
+  const nestedComments = (comment.children || []).map((comment) => {
+    return <Comment key={comment.id} comment={comment} type="child" />;
+  });
+
   useEffect(() => {
     convertTimestampToTime(comment.timestamp);
   }, [comment.timestamp]);
@@ -68,6 +72,7 @@ const Comment = ({ comment }) => {
           </Col>
         </Row>
       </Col>
+      <div style={{ marginLeft: "55px" }}>{nestedComments}</div>
     </Row>
   );
 };
