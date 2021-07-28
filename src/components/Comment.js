@@ -68,7 +68,12 @@ const Comment = ({ comment }) => {
             <p>{commentTime}</p>
           </Col>
           <Col md="2" className="reply">
-            <p>Reply {comment.children && `(${comment.children.length})`}</p>
+            <p>
+              Reply{" "}
+              {comment.children &&
+                comment.children.length > 0 &&
+                `(${comment.children.length})`}
+            </p>
           </Col>
         </Row>
       </Col>
