@@ -1,6 +1,6 @@
 Frontend zadatak
 
-## Simple frontend interview task.
+## Frontend interview task.
 
 In the project directory, open the first terminal and run:
 
